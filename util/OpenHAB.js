@@ -169,7 +169,10 @@ class OpenHAB {
         request({
                 url: myURL,
                 method: 'PUT',
-                body: state
+                body: state,
+                headers: {
+                  'Content-Type': 'text/plain'
+                }
         },
         function(error, response) {
             if(error) {
